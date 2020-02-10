@@ -1,7 +1,9 @@
 class SearchController < ApplicationController
 
   def index
-    HouseFacade.new.find_members(params[:house])
+    render locals: {
+        characters: HouseFacade.new.find_members(params[:house])
+      }
   end
 
 end
