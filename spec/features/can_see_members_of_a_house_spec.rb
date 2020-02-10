@@ -25,10 +25,11 @@ RSpec.describe "Visting Gryffindor" do
     click_button('Search For Members')
     expect(current_path).to eq('/search')
 
-    expect(response).to be_successful
-    parsed = JSON.parse(response.body, symbolize_names: true)
-    
-    expect(page).to have_content('Total house members: 21')
+    expect(page).to have_content('Total Order of the Pheonix members: 21')
+    expect(page).to have_content('Name: Harry Potter')
+    expect(page).to have_content('House: Gryffindor')
+    expect(page).to have_content('Role: student')
+    expect(page).to have_content('Patronus: stag')
 
   end
 end
