@@ -9,4 +9,5 @@ class CharacterFacade
     @role = info[:role]
   end
 
+  
 end
