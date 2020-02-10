@@ -1,6 +1,6 @@
 class HouseService
 
-  def get_students(house)
+  def get_characters(house)
     conn = Faraday.new('https://www.potterapi.com/v1/')
     response = conn.get("characters?key=#{ENV['HP_KEY']}&house=#{house}")
 
